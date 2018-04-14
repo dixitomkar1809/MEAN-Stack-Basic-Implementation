@@ -4,7 +4,7 @@
 </p>
 <ul>
     <li ng-repeat='video in videos'>
-        <img ng-src="{{video.shortname}}_tn.jpg">
+            <img ng-show="video.shortname" src="\images\{{video.shortname}}_tn.jpg" alt="Video_Image">
         <a href="/#/video/{{video._id}}">
             {{video.title}}
         </a>

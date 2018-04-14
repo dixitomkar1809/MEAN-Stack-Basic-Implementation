@@ -15,7 +15,8 @@ router.post('/', function(req, res){
     var collection = db.get('videos');
     collection.insert({
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        shortname: req.body.shortname
     }, function(err, video){
         if (err) throw err;
 
@@ -37,7 +38,8 @@ router.put('/:id', function(req, res){
     },
     {
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        shortname: req.body.shortname
     }, function(err, video){
         if (err) throw err;
 
